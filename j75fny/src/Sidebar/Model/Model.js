@@ -1,0 +1,70 @@
+import React from "react";
+import "./Model.css";
+import Input from "../../component/Input";
+
+function Model({ handleChange }) {
+  return (
+    <>
+      <div>
+        <h2 className="sidebar-title color-title">Model</h2>
+        <label className="sidebar-label-container">
+          <input
+             onChange={handleChange}  type="radio"
+            value=""
+            name="test1"
+          />
+          <span className="checkmark all"></span>
+          All
+        </label>
+
+        <Input
+          handleChange={handleChange}
+          value="black"
+          title="Black"
+          name="11"
+          color="black"
+        />
+
+        <Input
+          handleChange={handleChange}
+          value="blue"
+          title="Blue"
+          name="12 Pro"
+          color="blue"
+        />
+
+        <Input
+          handleChange={handleChange}
+          value="red"
+          title="Red"
+          name="13 Pro Max"
+          color="red"
+        />
+
+        <Input
+          handleChange={handleChange}
+          value="green"
+          title="Green"
+          name="test1"
+          color="green"
+        />
+
+        <label className="sidebar-label-container">
+          <input
+            onChange={handleChange}
+            type="radio"
+            value="white"
+            name="test1"
+          />
+          <span
+            className="checkmark"
+            style={{ background: "white", border: "2px solid black" }}
+          ></span>
+          White
+        </label>
+      </div>
+    </>
+  );
+}
+
+export default Model;

@@ -1,0 +1,79 @@
+.sidebar-title {
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar-items {
+    margin-top: 20px;
+  }
+  
+  .sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-right: 2px solid #e5e5e5;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    overflow-y: auto;
+  }
+  
+  .sidebar-label-container {
+    display: flex;
+    align-items: center;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .sidebar-label-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .checkmark {
+    position: relative; /* changed from absolute to relative */
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    margin-right: 10px; /* added for spacing between the checkmark and text */
+  }
+  
+  .sidebar-label-container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  .sidebar-label-container input:checked ~ .checkmark {
+    background-color: #2196f3;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: white;
+  }
+  
+  .sidebar-label-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .line {
+    margin-top: 3rem;
+    border-color: #f7f7f7;
+  }
+  
