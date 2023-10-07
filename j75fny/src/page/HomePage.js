@@ -6,6 +6,8 @@ import Card from "../component/Card";
 import "../index.css";
 import { useState } from "react";
 import { data } from "../db/data";
+import ProductSummary from "../ProductSummary";
+
 
 export const HomePage = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -47,6 +49,7 @@ export const HomePage = () => {
       <div className="main-content">
         <Recommended />
         <Products productsData={paginatedData()} />
+        <ProductSummary></ProductSummary>
         <div className="pagination">
           {[...Array(totalPages)].map((_, index) => (
             <button
